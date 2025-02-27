@@ -84,10 +84,10 @@ const WelcomeComponent = () => {
         I guess God must have been like "bhatka hua hai bechara pure din mere against bolta rehta hai, abhi ek aisi ladki se milvata hoon seedha kar degi". 
         And yes, seedha toh tune mujhe kiya Aliza, for the better, and I thank you so much for that. 
         <br></br>
-        {/* <br></br>
-        I mean look at you! Who wouldn't want to be your friend, you are the strongest person I know, who suffered such an unbearable tragedy in your life, but is still getting up every day, and working so hard through all of it. I wish I had even 10% of your strength. I'd like to believe that if Ananya were here, she'd be so happy to see you being strong every day.
+        <br></br>
+        {/* I mean look at you! Who wouldn't want to be your friend, you are the strongest person I know, who suffered such an unbearable tragedy in your life, but is still getting up every day, and working so hard through all of it. I wish I had even 10% of your strength. I'd like to believe that if Ananya were here, she'd be so happy to see you being strong every day. */}
         I once said that I believe you are the best version of myself. That still holds true, never ever think that you are lesser than anyone else, or that you are mean or selfish or whatever. When you asked me the other day if I thought you were selfish, it reminded me of a lyric of one of my favourite songs.
-        <br></br> */}
+        <br></br>
         <br></br>
         "When you think the night has seen your mind
         <br></br>
