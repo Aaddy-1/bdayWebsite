@@ -22,7 +22,7 @@ function App() {
           Learn React
         </a>
       </header> */}
-      <Router basename='/bdayWebsite'>
+      <Router>
       <Routes>
         <Route path="/" element={<WordleGame />} />
         <Route path="/success" element={<WelcomeComponent />} />
