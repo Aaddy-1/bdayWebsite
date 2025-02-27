@@ -1,0 +1,48 @@
+.keyboard {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 20px;
+  }
+  
+  .keyboard-row {
+    display: flex;
+    gap: 5px;
+    margin-bottom: 5px;
+  }
+  
+  .key {
+    width: 40px;
+    height: 50px;
+    font-size: 18px;
+    font-weight: bold;
+    text-transform: uppercase;
+    background-color: #ccc;
+    border: none;
+    cursor: pointer;
+    transition: 0.2s;
+  }
+  
+  .key:hover {
+    background-color: #aaa;
+  }
+  
+  .key.wide {
+    width: 80px;
+  }
+  
+  .correct {
+    background-color: #6aaa64 !important; /* Green */
+    color: white;
+  }
+  
+  .present {
+    background-color: #c9b458 !important; /* Yellow */
+    color: white;
+  }
+  
+  .absent {
+    background-color: #787c7e !important; /* Gray */
+    color: white;
+  }
+  

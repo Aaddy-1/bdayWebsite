@@ -1,0 +1,206 @@
+body {
+  background-color: #F5F5DD; 
+  margin: 0;
+  overflow-x: hidden; /* Prevents horizontal scroll issues */
+  position: relative;
+}
+
+  
+  /* Brown Abstract Blurred Shape */
+  body::before {
+    content: "";
+    position: absolute;
+    top: 20%;
+    left: 10%;
+    width: 200px;
+    height: 200px;
+    background: rgba(139, 94, 60, 0.4); /* Soft brown glow */
+    filter: blur(80px);
+    z-index: -1;
+  }
+  
+  body::after {
+    content: "";
+    position: absolute;
+    bottom: 10%;
+    right: 15%;
+    width: 250px;
+    height: 250px;
+    background: rgba(141, 102, 72, 0.4); /* Darker brown */
+    filter: blur(100px);
+    z-index: -1;
+  }
+  
+
+
+.audio-container {
+  background-color: #D2B48C; /* Tan */
+  border-radius: 10px;
+  padding: 10px;
+}
+
+.button {
+  background-color: #8B5E3C; /* Chocolate */
+  color: white;
+  border-radius: 50%;
+  padding: 10px;
+}
+
+.button:hover {
+  background-color: #6D4C32; /* Darker brown */
+}
+
+/* Thumbnail Container - Ensure Centering */
+.thumbnail-container {
+    display: flex;
+    justify-content: center; /* Centers horizontally */
+    align-items: center; /* Centers vertically */
+    width: 100%;
+    max-width: 15rem; /* Matches image width */
+    margin: 0 auto; /* Ensures centering within its parent */
+    overflow: hidden;
+  }
+  
+  /* Thumbnail */
+  .thumbnail {
+    width: 15rem;
+    height: 20rem;
+    object-fit: cover;
+    border-radius: 1rem;
+    padding-bottom: 1rem;
+    display: block; /* Ensures it does not inherit extra space */
+  }
+  /* Global fade-in effect */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.welcome-box, .music-player {
+    animation: fadeIn 1.5s ease-out;
+}
+
+/* Welcome Box */
+.welcome-box {
+    max-width: 40rem;
+    text-align: center;
+    padding: 20px; /* Keeps overall padding */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    border-radius: 16px;
+  }
+  
+  /* Paragraph Styling - Adds Left & Right Padding */
+  .message {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    color: #8B4411;
+    padding-left: 20px;  /* Adds padding to the left */
+    padding-right: 20px; /* Adds padding to the right */
+  }
+
+  
+/* Controls Wrapper */
+/* Controls Wrapper */
+.controls {
+    display: flex;
+    justify-content: center; /* Centers buttons horizontally */
+    align-items: center; /* Ensures vertical alignment */
+    gap: 12px; /* Spaces buttons evenly */
+    margin-top: 5px;
+    margin-bottom: 15px;
+  }
+  
+  /* Themed Buttons */
+  .control-button {
+    width: 50px; /* Ensures uniform size */
+    height: 50px;
+    background-color: #D2B48C; /* Tan (matches background) */
+    border: 2px solid #C2A080; /* Adds a border to enhance hover visibility */
+    color: #5C4033; /* Dark brown text/icons */
+    border-radius: 10px; /* Smooth corners */
+    cursor: pointer;
+    transition: background-color 0.2s ease-in-out, transform 0.1s ease-in-out, border-color 0.2s ease-in-out;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+  }
+  
+  .control-button:hover {
+    box-shadow: 0 0 10px rgba(139, 94, 60, 0.3); /* Soft glow */
+    transform: scale(1.1);
+  }
+  
+  /* Play/Pause Button - Slightly Larger */
+  .play-pause {
+    width: 60px; /* Makes the play button slightly larger */
+    height: 60px;
+  }
+  .play-pause:active {
+    transform: scale(0.9);
+  }
+  
+  .thumbnail-progress-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+  }
+  
+  .thumbnail-container {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+  }
+  
+  .progress-container {
+    width: 30rem; /* Same width as thumbnail */
+    max-width: 100%;
+    margin-top: 10px;
+    display: flex;
+    justify-content: center;
+  }
+  
+  .progress-bar {
+    width: 100%;
+    max-width: 90%;
+    appearance: none;
+    height: 5px;
+    background: #8B5E3C;
+    border-radius: 5px;
+    outline: none;
+    transition: opacity 0.2s;
+    /* padding: 0 10px; */
+  }
+  
+  .progress-bar:hover {
+    opacity: 0.8;
+  }
+  
+  .progress-bar::-webkit-slider-thumb {
+    appearance: none;
+    width: 12px;
+    height: 12px;
+    background: #5C4033;
+    border-radius: 50%;
+    cursor: pointer;
+  }
+  .now-playing {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #5C4033;
+    transition: opacity 0.5s ease-in-out, transform 0.3s ease-in-out;
+  }
+  
+  /* Fade-in effect when playing */
+  .fade-in {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  
+  /* Fade-out effect when paused */
+  .fade-out {
+    opacity: 0.5;
+    transform: translateY(5px);
+  }
+  
