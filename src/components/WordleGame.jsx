@@ -82,7 +82,7 @@ const WordleGame = () => {
 
   return (
     <div className="wordle-game">
-      <h1>Wordle</h1>
+      <h1>WORDLE</h1>
       <div className="game-container">
         <div className="grid">
           {Array.from({ length: MAX_ATTEMPTS }).map((_, rowIndex) => {

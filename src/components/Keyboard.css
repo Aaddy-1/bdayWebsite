@@ -1,48 +1,105 @@
 .keyboard {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin-top: 20px;
+  display: grid;
+  grid-template-rows: repeat(4, auto);
+  gap: 8px;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  max-width: 500px;
+  margin: 0 auto;
+  padding: 10px;
+}
+
+/* Keyboard Rows - Ensures uniform layout */
+.keyboard-row {
+  display: grid;
+  grid-template-columns: repeat(10, 1fr); /* Keeps all rows structured */
+  gap: 5px;
+  justify-content: center;
+  width: 100%;
+}
+
+/* Second Row - 9 Keys */
+.keyboard-row:nth-child(2) {
+  grid-template-columns: repeat(9, 1fr);
+}
+
+/* Third Row - 7 Keys */
+.keyboard-row:nth-child(3) {
+  grid-template-columns: repeat(7, 1fr);
+}
+
+/* Keys */
+.key {
+  width: 100%;
+  height: 45px;
+  font-size: 18px;
+  font-weight: bold;
+  text-transform: uppercase;
+  background-color: #ccc;
+  border: none;
+  cursor: pointer;
+  transition: 0.2s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 5px;
+}
+
+/* Hover Effect */
+.key:hover {
+  background-color: #aaa;
+}
+
+/* Wide Keys (ENTER, BACKSPACE) */
+.key.wide {
+  grid-column: span 2; /* Keeps them proportional */
+  height: 50px;
+}
+
+/* Color Feedback */
+.correct {
+  background-color: #6aaa64 !important;
+  color: white;
+}
+
+.present {
+  background-color: #c9b458 !important;
+  color: white;
+}
+
+.absent {
+  background-color: #787c7e !important;
+  color: white;
+}
+
+/* RESPONSIVE ADJUSTMENTS */
+@media (max-width: 600px) {
+  .keyboard {
+      max-width: 90vw;
   }
-  
-  .keyboard-row {
-    display: flex;
-    gap: 5px;
-    margin-bottom: 5px;
-  }
-  
+
   .key {
-    width: 40px;
-    height: 50px;
-    font-size: 18px;
-    font-weight: bold;
-    text-transform: uppercase;
-    background-color: #ccc;
-    border: none;
-    cursor: pointer;
-    transition: 0.2s;
+      font-size: 4vw;
+      height: 9vw;
   }
-  
-  .key:hover {
-    background-color: #aaa;
-  }
-  
+
   .key.wide {
-    width: 80px;
+      height: 10vw;
   }
-  
-  .correct {
-    background-color: #6aaa64 !important; /* Green */
-    color: white;
+}
+
+@media (max-width: 400px) {
+  .keyboard {
+      max-width: 95vw;
   }
-  
-  .present {
-    background-color: #c9b458 !important; /* Yellow */
-    color: white;
+
+  .key {
+      font-size: 5vw;
+      height: 10vw;
   }
-  
-  .absent {
-    background-color: #787c7e !important; /* Gray */
-    color: white;
+
+  .key.wide {
+      height: 12vw;
   }
-  
+}

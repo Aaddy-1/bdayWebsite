@@ -45,8 +45,10 @@ const WelcomeComponent = () => {
     if (!audioRef.current) return;
     if (isPlaying) {
       audioRef.current.pause();
+      console.log(1);
     } else {
       audioRef.current.play().catch(error => console.error("Audio play error:", error));
+      console.log(2);
     }
     setIsPlaying(!isPlaying);
   };
@@ -69,10 +71,11 @@ const WelcomeComponent = () => {
   };
 
   return (
+    <div className="welcome-container">
     <div className="flex flex-col items-center justify-center min-h-screen bg-[#F5E6CC] p-6">
       
       <div className="max-w-2xl text-center bg-[#D2B48C] p-6 shadow-lg rounded-2xl">
-        <h1 className="text-3xl font-bold text-[#5C4033] mb-4">Welcome!</h1>
+        <h1 className="text-3xl font-bold text-[#5C4033] mb-4">Happy Birthday Alizehh :D</h1>
         <p className="message">
         Hello Aliza, Happy Birthdayy!!
         I'm writing this message at 4:00 AM, Arizona time on the 27th of Feb, you think I am sleeping rn, but hehe I never sleep. 
@@ -80,6 +83,7 @@ const WelcomeComponent = () => {
         You know that I believe god isn't real, but I believe that only in our specific case, hamara milna was divine serendipity (Go ahead, look up what serendipity means hehe).  
         I guess God must have been like "bhatka hua hai bechara pure din mere against bolta rehta hai, abhi ek aisi ladki se milvata hoon seedha kar degi". 
         And yes, seedha toh tune mujhe kiya Aliza, for the better, and I thank you so much for that. 
+        <br></br>
         <br></br>
         I mean look at you! Who wouldn't want to be your friend, you are the strongest person I know, who suffered such an unbearable tragedy in your life, but is still getting up every day, and working so hard through all of it. I wish I had even 10% of your strength. I'd like to believe that if Ananya were here, she'd be so happy to see you being strong every day.
         I once said that I believe you are the best version of myself. That still holds true, never ever think that you are lesser than anyone else, or that you are mean or selfish or whatever. When you asked me the other day if I thought you were selfish, it reminded me of a lyric of one of my favourite songs.
@@ -96,7 +100,7 @@ const WelcomeComponent = () => {
         Every day, I feel so grateful to have you in my life, through all of our ups and downs, and I just made this website to give a small token of respect to you, and although you didnt send me any pics so I had to make do with screenshotting videos and AI-ing myself out of the images wherever possible, I guess I deserve it too for acting like a creep. Welp.
         <br></br>
         <br></br>
-        Okay now listen to these songs, most of them are your favorites, I've only put one song from my side (Yellow), because I think about you whenever I listen to that song.
+        Okay now listen to these songs, most of them are your favorites, I've only put one song from my end (Yellow), because I think about you whenever I listen to that song.
         <br></br>
         <br></br>
         Look at the stars
@@ -105,12 +109,15 @@ const WelcomeComponent = () => {
         <br></br> 
         And everything you do.
         <br></br>
+        Yeah they were all yellow
+        <br></br>
         It's Trueee,
         <br></br>
         Look how they shine for Youuu
         <br></br>
         Look how they shine for Youuu
         <br></br>
+        Look how they shine
         </p>
       </div>
 
@@ -173,6 +180,7 @@ const WelcomeComponent = () => {
           </button>
         </div>
       </div>
+    </div>
     </div>
   );
 };

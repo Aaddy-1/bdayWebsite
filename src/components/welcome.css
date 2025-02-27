@@ -1,4 +1,4 @@
-body {
+.welcome-container {
   background-color: #F5F5DD; 
   margin: 0;
   overflow-x: hidden; /* Prevents horizontal scroll issues */
@@ -7,7 +7,7 @@ body {
 
   
   /* Brown Abstract Blurred Shape */
-  body::before {
+  .welcome-container::before {
     content: "";
     position: absolute;
     top: 20%;
@@ -19,7 +19,7 @@ body {
     z-index: -1;
   }
   
-  body::after {
+  .welcome-container::after {
     content: "";
     position: absolute;
     bottom: 10%;
