@@ -1,7 +1,6 @@
 {
   "name": "aliza-website",
   "version": "0.1.0",
-  "homepage": "https://aaddy-1.github.io/bdayWebsite",
   "private": true,
   "dependencies": {
     "@emotion/react": "^11.14.0",
