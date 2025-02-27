@@ -9,9 +9,10 @@ import "./welcome.css";
 
 const WelcomeComponent = () => {
   const songs = [
-    { title: "Call It What You Want", src: "/songs/callitWhatYouWant.mp3", thumbnail: "/images/callitWhatYouWant.png" },
-    { title: "All Too Well", src: "/songs/allTooWell.mp3", thumbnail: "/images/allTooWell.jpg" },
-    { title: "Ye Tune Kya Kiya", src: "songs/yeTuneKyaKiya.mp3", thumbnail: "/images/yeTuneKyaKiya.jpg" },
+    { title: "Yellow", src: "songs/yellow.mp3", thumbnail: "images/yellow.jpg" },
+    { title: "Call It What You Want", src: "songs/callitWhatYouWant.mp3", thumbnail: "images/callItWhatYouWant.png" },
+    { title: "All Too Well", src: "songs/allTooWell.mp3", thumbnail: "images/allTooWell.jpg" },
+    { title: "Ye Tune Kya Kiya", src: "songs/yeTuneKyaKiya.mp3", thumbnail: "images/yeTuneKyaKiya.jpg" },
   ];
 
   const [currentSongIndex, setCurrentSongIndex] = useState(0);
